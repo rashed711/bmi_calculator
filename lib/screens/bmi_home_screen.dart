@@ -1,5 +1,6 @@
 import 'package:bmi_calculator/funcitions/build_gander_item.dart';
 import 'package:bmi_calculator/funcitions/weight_and_age.dart';
+import 'package:bmi_calculator/screens/result_screen.dart';
 import 'package:flutter/material.dart';
 
 class Bmihomescreen extends StatefulWidget {
@@ -164,8 +165,25 @@ class _BmihomescreenState extends State<Bmihomescreen> {
 
             //////////////////////////////////////////////////////////////////////////////////////////////////
             Expanded(
-              child: Row(
-                children: [Expanded(child: Container(color: Colors.orange))],
+              child: GestureDetector(
+                onTap: () {
+                  double result = weight / ((height / 100) * (height / 100));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ResultScreen(result: result),
+                    ),
+                  );
+                },
+                child: Container(
+                  color: Colors.black,
+                  child: const Center(
+                    child: Text(
+                      'Calculate BMI',
+                      style: TextStyle(fontSize: 25, color: Colors.white),
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
