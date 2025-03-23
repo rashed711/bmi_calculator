@@ -3,14 +3,14 @@ import 'package:bmi_calculator/funcitions/weight_and_age.dart';
 import 'package:bmi_calculator/screens/result_screen.dart';
 import 'package:flutter/material.dart';
 
-class Bmihomescreen extends StatefulWidget {
-  const Bmihomescreen({super.key});
+class BmiHomeScreen extends StatefulWidget {
+  const BmiHomeScreen({super.key});
 
   @override
-  State<Bmihomescreen> createState() => _BmihomescreenState();
+  State<BmiHomeScreen> createState() => _BmiHomeScreenState();
 }
 
-class _BmihomescreenState extends State<Bmihomescreen> {
+class _BmiHomeScreenState extends State<BmiHomeScreen> {
   bool isMale = true;
   int height = 140;
   int weight = 60;
@@ -29,7 +29,6 @@ class _BmihomescreenState extends State<Bmihomescreen> {
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
                   children: [
-
                     Expanded(
                       child: buildGanderItem(
                         icon: Icons.male,

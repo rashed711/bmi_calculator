@@ -10,6 +10,6 @@ class BmiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Bmihomescreen();
+    return MaterialApp(home: BmiHomeScreen());
   }
 }
