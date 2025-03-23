@@ -12,7 +12,7 @@ class Bmihomescreen extends StatefulWidget {
 
 class _BmihomescreenState extends State<Bmihomescreen> {
   bool isMale = true;
-  int height = 120;
+  int height = 140;
   int weight = 60;
   int age = 20;
 
@@ -29,6 +29,7 @@ class _BmihomescreenState extends State<Bmihomescreen> {
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
                   children: [
+
                     Expanded(
                       child: buildGanderItem(
                         icon: Icons.male,
@@ -103,7 +104,7 @@ class _BmihomescreenState extends State<Bmihomescreen> {
                         max: 200,
                         value: height.toDouble(),
                         thumbColor: Colors.red,
-                        activeColor: Colors.green,
+                        activeColor: Colors.white,
                         inactiveColor: Colors.red,
                         onChanged: (value) {
                           setState(() {
@@ -116,7 +117,7 @@ class _BmihomescreenState extends State<Bmihomescreen> {
                 ),
               ),
             ),
-            //////////////////////////////////////////////////////////////////////////////////////////////////
+
             Expanded(
               flex: 5,
               child: Padding(
@@ -163,7 +164,6 @@ class _BmihomescreenState extends State<Bmihomescreen> {
               ),
             ),
 
-            //////////////////////////////////////////////////////////////////////////////////////////////////
             Expanded(
               child: GestureDetector(
                 onTap: () {
@@ -171,7 +171,7 @@ class _BmihomescreenState extends State<Bmihomescreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ResultScreen(result: result),
+                      builder: (_) => ResultScreen(result: result),
                     ),
                   );
                 },
